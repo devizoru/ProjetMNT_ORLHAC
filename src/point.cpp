@@ -40,7 +40,7 @@ void Point::latlong2lambert93(std::vector<Point> &Points)
     proj_destroy(P);
     P = P_for_GIS;
 
-    for (std::size_t i = 0; i = Points.size(); i++)
+    for (std::size_t i = 0; i < Points.size(); i++)
     {
         a = proj_coord(Points.at(i).m_y, Points.at(i).m_x, 0, 0);
 
