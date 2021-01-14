@@ -14,6 +14,6 @@ file( # liste des fichiers à compiler
 )
 
 add_executable( # création de l’exécutable binaire du projet
-    main # nom du binaire
+    create_raster # nom du binaire
     ${source_files} # liste des fichiers compilés pour le linking
 )

@@ -14,7 +14,7 @@ public:
 
     friend std::istream &operator>>(std::istream &stream, Point &p);
     float m_x, m_y, m_level;
-    void latlong2lambert93(std::vector<Point> &Points);
+    // void latlong2lambert93(std::vector<Point> &Points);
 };
 
 #endif

@@ -9,8 +9,8 @@ Point::~Point()
     // Nothing to destroy.
 }
 
-void Point::latlong2lambert93(std::vector<Point> &Points)
-{
+// void Point::latlong2lambert93(std::vector<Point> &Points)
+// {
     // PJ_CONTEXT *C;
     // PJ *P;
     // PJ *P_for_GIS;
@@ -52,7 +52,7 @@ void Point::latlong2lambert93(std::vector<Point> &Points)
 
     // proj_destroy(P);
     // proj_context_destroy(C); /* may be omitted in the single threaded case */
-}
+// }
 
 std::istream &operator>>(std::istream &stream, Point &p)
 {
