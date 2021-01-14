@@ -14,6 +14,7 @@ Image::~Image()
 void Image::export_image(const std::string &filename)
 {
     ofstream image(filename);
+    //Writes binary ppm file by reading pixels to translate to binary
     if (!image.is_open())
     {
         throw std::runtime_error("Impossible d'ouvrir le fichier en lecture");

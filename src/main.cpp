@@ -6,6 +6,7 @@ int main(int argc, char *argv[])
 {
     if (argc < 3)
     {
+        // Execution requires the name of the file to decode and turn into a ppm file, as well as a dimension
         std::cerr << "Missing arguments" << std::endl;
     }
     else

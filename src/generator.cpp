@@ -33,7 +33,7 @@ void Generator::generate()
     }
     f.close();
 
-    // TODO: projection
+    // TODO: projection using PROJ
 
     float lat_min, lat_max, lon_min, lon_max, lv_min, lv_max;
 
@@ -71,12 +71,13 @@ void Generator::generate()
     }
 
     uint8_t *image_data = new uint8_t[m_w * m_h * 3];
-
+    //Initialize all pixels to level zero to reset memory in case there is information remaining
     for (size_t i = 0; i < m_w * m_h * 3; i++)
     {
         image_data[i] = 0;
     }
 
+    // Mapping pixels and setting level of each pixel
     for (size_t i = 0; i < points.size(); i++)
     {
         size_t x, y;
@@ -107,6 +108,7 @@ void Generator::generate()
         255, 186, 133,
         255, 255, 255};
 
+    // Coloring pixels according to level, by interpolating RGB data from the Haxby colormap
     for (size_t i = 0; i < m_w * m_h * 3; i += 3)
     {
         float colormap_index = ((float)image_data[i]) / 255 * 11;
