@@ -1,4 +1,0 @@
-[submodule "lib/proj"]
-	path = lib/proj
-	url = https://github.com/OSGeo/PROJ
-	branch = 7.2
