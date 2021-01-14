@@ -4,6 +4,9 @@ project(main_exe) # nom du projet : "main_exe"
 set(CMAKE_BUILD_TYPE debug) # compilation en mode debug
 set(CMAKE_CXX_FLAGS "-Wall -Wextra -std=c++11") # options
 
+# find_package(PROJ4)
+# target_link_libraries(main_exe ${PROJ4_LIBRARIES})
+
 file( # liste des fichiers à compiler
     GLOB_RECURSE # recherche récursive
     source_files # fichiers listés dans une variable source_files

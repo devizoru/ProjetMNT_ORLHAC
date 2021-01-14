@@ -3,8 +3,6 @@
 
 #include <cstdlib>
 #include <iostream>
-#include "../lib/proj/src/proj.h"
-#include "point.h"
 #include <vector>
 #include <fstream>
 
